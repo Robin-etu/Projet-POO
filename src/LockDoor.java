@@ -31,8 +31,9 @@ public class LockDoor extends Door{
     public void Lock(){
         this.isLocked = true;
     }
-    public void Unlock(){
-        this.isLocked = false;
+    public void Unlock(int key){
+        if (this.key == key)
+            this.isLocked = false;
     }
     @Override
     public void Open(){
