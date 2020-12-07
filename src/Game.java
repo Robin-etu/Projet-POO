@@ -12,10 +12,11 @@ import java.util.List;
  * @author Robin
  */
 public class Game {
-    private String description;
-    private Player player;
-    private List<Room> map;
+    private final String description;
+    private final Player player;
+    private final List<Room> map;
     
+    // Constructor
     public Game(String new_description, Player new_player, List<Room> new_map){
         this.description = new_description;
         this.player = new_player;

@@ -10,13 +10,33 @@
  */
 public class LockDoor extends Door{
     private boolean isLocked;
-    private int key;
+    private final int key;
 
+    // Constructor
     public LockDoor(Room new_next_room, char new_location, int new_key) {
         super(new_next_room, new_location);
         this.key = new_key;
         this.isLocked = true;
     }
     
+    // Accessors
+    public boolean getIsLocked(){
+        return this.isLocked;
+    }
+    public int getKey(){
+        return this.key;
+    }
     
+    // Modifiers
+    public void Lock(){
+        this.isLocked = true;
+    }
+    public void Unlock(){
+        this.isLocked = false;
+    }
+    @Override
+    public void Open(){
+        if (!this.getIsLocked())
+            super.Open();
+    }
 }

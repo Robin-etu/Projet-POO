@@ -9,16 +9,29 @@
  * @author Robin
  */
 public class Door{
-    private Room next_room;
+    private final Room next_room;
     private boolean isClosed;
-    private char location; // indicates where the door is in the room
+    private final char location; // indicates where the door is in the room
 
+    // Constructor
     public Door(Room new_next_room, char new_location){
         this.next_room = new_next_room;
         this.location = new_location;
         this.isClosed = true;
     }
     
+    // Accessors
+    public Room getNextRoom(){
+        return this.next_room;
+    }
+    public char getLocation(){
+        return this.location;
+    }
+    public boolean getIsClosed(){
+        return this.isClosed;
+    }
+    
+    // Modifiers
     public void Open(){
         this.isClosed = false;
     }
