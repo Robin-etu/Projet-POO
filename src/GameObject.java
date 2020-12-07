@@ -10,9 +10,11 @@
  */
 public class GameObject{
     private String name, description;
+    private int key;
 
-    public GameObject(String new_name, String new_description){
+    public GameObject(String new_name, String new_description, int new_key){
         this.name = new_name;
         this.description = new_description;
+        this.key = new_key;
     }
 }
