@@ -34,9 +34,11 @@ public class Door{
     // Modifiers
     public void Open(){
         this.isClosed = false;
+        System.out.println("The door is opened now");
     }
     
     public void Close(){
         this.isClosed = true;
+        System.out.println("The door is closed now");
     }
 }
