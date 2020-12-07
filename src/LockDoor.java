@@ -28,9 +28,6 @@ public class LockDoor extends Door{
     }
     
     // Modifiers
-    public void Lock(){
-        this.isLocked = true;
-    }
     public void Unlock(int key){
         if (this.key == key)
             this.isLocked = false;
