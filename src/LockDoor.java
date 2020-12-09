@@ -13,8 +13,8 @@ public class LockDoor extends Door{
     private final int key;
 
     // Constructor
-    public LockDoor(Room new_next_room, char new_location, int new_key) {
-        super(new_next_room, new_location);
+    public LockDoor(char new_location, int new_key) {
+        super(new_location);
         this.key = new_key;
         this.isLocked = true;
     }

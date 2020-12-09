@@ -9,13 +9,12 @@
  * @author Robin
  */
 public class Door{
-    private final Room next_room;
+    private Room next_room = null;
     private boolean isClosed;
     private final char location; // indicates where the door is in the room
 
     // Constructor
-    public Door(Room new_next_room, char new_location){
-        this.next_room = new_next_room;
+    public Door(char new_location){
         this.location = new_location;
         this.isClosed = true;
     }
@@ -40,5 +39,9 @@ public class Door{
     public void Close(){
         this.isClosed = true;
         System.out.println("The door is closed now");
+    }
+    
+    public void setNextRoom(Room r){
+        this.next_room = r;
     }
 }
